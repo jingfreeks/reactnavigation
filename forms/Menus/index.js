@@ -36,14 +36,15 @@ import DTRlist from           "./DTRlist.js";
 import LoginScreen from       "./LoginScreen.js";
 import EmployeeScreen from    "./EmployeeScreen.js";
 import NewEmployeeScreen from    "./NewEmployeeScreen.js";
-
+import NewEmployeepayinfoScreen from "./NewEmployeepayinfoScreen.js";
 const HomeScreenRouter = DrawerNavigator({
         Home:{ screen: HomeScreen},
         DTR: {screen:DTRScreen},
         DTRlist:{screen:DTRlist},
         Logins:{screen:LoginScreen},
         Employee:{screen:EmployeeScreen},
-        NewEmployee:{screen:NewEmployeeScreen}
+        NewEmployee:{screen:NewEmployeeScreen},
+        NewEmployeepayinfo:{screen:NewEmployeepayinfoScreen}
   },
   {
     contentComponent: props => <SideBar {...props} />
