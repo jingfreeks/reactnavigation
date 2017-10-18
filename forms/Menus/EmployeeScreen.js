@@ -27,6 +27,7 @@
   Tab,
   Tabs,
   List,
+  Footer,
 } from "native-base";
 
  import {
@@ -75,9 +76,9 @@ export default class EmployeeScreen extends Component<{}> {
           </Right>
       </Header>
             <Tabs>
-             <Tab heading="Company" tabStyle={{backgroundColor: '#ecf0f1'}}
-                 textStyle={{color: 'black'}} activeTabStyle={{backgroundColor: '#FF9800'}}
-                 activeTextStyle={{color: 'black', fontWeight: 'normal'}}
+             <Tab heading="COMPANY" tabStyle={{backgroundColor: '#ecf0f1'}}
+                 textStyle={{color: 'black'}} activeTabStyle={{backgroundColor: '#ecf0f1'}}
+                 activeTextStyle={{color: 'black', fontWeight: 'bold'}}
              >
                  <Content>
                  <View>
@@ -87,19 +88,24 @@ export default class EmployeeScreen extends Component<{}> {
                            <Rows data={CompanytableData} style={styles.row} textStyle={styles.text}/>
                          </Table>
 
-                         <Button style={{width:300,marginTop:20,marginLeft:10,alignItems:'center',justifyContent:'center',backgroundColor:'#ecf0f1'}}
-                             onPress={()=> this.props.navigation.navigate("DTRlist")}
-                         >
-                             <Text style={{color:'black'}}>Add New Company </Text>
-                         </Button>
 
                  </View>
                 </Content>
+                  <Footer style={{backgroundColor: 'white',height:70}}>
+                    <Left>
+                        <Button style={{width:300,marginTop:20,marginLeft:10,alignItems:'center',
+                          justifyContent:'center',backgroundColor:'#ecf0f1',marginBottom:40,}}
+                            onPress={()=> this.props.navigation.navigate("DTRlist")}
+                        >
+                            <Text style={{color:'black'}}>Add New Company </Text>
+                        </Button>
+                    </Left>
+                  </Footer>
              </Tab>
 
-             <Tab heading="New Employee" tabStyle={{backgroundColor: '#ecf0f1'}}
-               textStyle={{color: 'black'}} activeTabStyle={{backgroundColor: '#FF9800'}}
-               activeTextStyle={{color: 'black', fontWeight: 'normal'}}
+             <Tab heading="MY EMPLOYEES" tabStyle={{backgroundColor: '#ecf0f1'}}
+               textStyle={{color: 'black'}} activeTabStyle={{backgroundColor: '#ecf0f1'}}
+               activeTextStyle={{color: 'black', fontWeight: 'bold'}}
              >
 
                 <Content>
@@ -109,19 +115,25 @@ export default class EmployeeScreen extends Component<{}> {
                             <Rows data={EmployeetableData} style={styles.row} textStyle={styles.text}/>
                           </Table>
 
-                          <Button style={{width:300,marginTop:20,marginLeft:10,alignItems:'center',justifyContent:'center',backgroundColor:'#ecf0f1'}}
-                              onPress={()=> this.props.navigation.navigate("NewEmployee")}
-                          >
-                              <Text style={{color:'black'}}>Add New Employee</Text>
-                          </Button>
                   </View>
                </Content>
+
+               <Footer style={{backgroundColor: 'white',height:70}}>
+                 <Left>
+                     <Button style={{width:300,marginTop:20,marginLeft:10,alignItems:'center',
+                       justifyContent:'center',backgroundColor:'#ecf0f1',marginBottom:40,}}
+                         onPress={()=> this.props.navigation.navigate("NewEmployee")}
+                     >
+                         <Text style={{color:'black'}}>Add New Employee</Text>
+                     </Button>
+                 </Left>
+               </Footer>
 
              </Tab>
 
              <Tab heading="Payroll" tabStyle={{backgroundColor: '#ecf0f1'}}
-                 textStyle={{color: 'black'}} activeTabStyle={{backgroundColor: '#FF9800'}}
-                 activeTextStyle={{color: 'black', fontWeight: 'normal'}}
+                 textStyle={{color: 'black'}} activeTabStyle={{backgroundColor: '#ecf0f1'}}
+                 activeTextStyle={{color: 'black', fontWeight: 'bold'}}
              >
                  <Content>
                     <List dataArray={''}
