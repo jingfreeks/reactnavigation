@@ -61,7 +61,7 @@ export default class LoginScreen extends Component<{}> {
           </Header>*/}
 
           <Content style={{backgroundColor:'#FFC107',}}>
-              <Item style={{borderColor:'#FFC107'}}>
+              {/*<Item style={{borderColor:'#FFC107'}}>
                   <Image style={{width:150,height:100,marginLeft:10}}
                     source={require('../../image/binhilogo.png')}
                   />
@@ -85,7 +85,7 @@ export default class LoginScreen extends Component<{}> {
                 >
                     <Text style={{color:'black'}}>Log-in</Text>
                 </Button>
-            </Form>
+            </Form>*/}
           </Content>
       </Container>
     );
