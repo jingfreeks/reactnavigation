@@ -29,25 +29,29 @@ import {
 } from 'react-native';
 import { DrawerNavigator } from "react-navigation";
 
-import HomeScreen from        "./HomeScreen.js";
-import DTRScreen from         "./DTRScreen.js";
-import SideBar from           "./SideBar.js";
-import DTRlist from           "./DTRlist.js";
+import HomeScreen from            "./HomeScreen.js";
+import DTRScreen from             "./DTRScreen.js";
+import SideBar from               "./SideBar.js";
+import EmployeePersonalInfoscreen from  "./EmployeePersonalInfoscreen.js";
 import LoginScreen from       "./LoginScreen.js";
 import EmployeeScreen from    "./EmployeeScreen.js";
 import NewEmployeeScreen from    "./NewEmployeeScreen.js";
-import NewEmployeepayinfoScreen from "./NewEmployeepayinfoScreen.js";
+import DtremployeeScreen from    "./DtremployeeScreen.js";
+//import NewEmployeepayinfoScreen from "./NewEmployeepayinfoScreen.js";
 const HomeScreenRouter = DrawerNavigator({
         Home:{ screen: HomeScreen},
         DTR: {screen:DTRScreen},
-        DTRlist:{screen:DTRlist},
+        EmployeePersonalInfo:{screen:EmployeePersonalInfoscreen},
         Logins:{screen:LoginScreen},
         Employee:{screen:EmployeeScreen},
         NewEmployee:{screen:NewEmployeeScreen},
-        NewEmployeepayinfo:{screen:NewEmployeepayinfoScreen}
+        Dtremployee:{screen:DtremployeeScreen}
+        //NewEmployeepayinfo:{screen:NewEmployeepayinfoScreen}
   },
   {
-    contentComponent: props => <SideBar {...props} />
-  }
+    contentComponent: props => <SideBar {...props} style={{width:200}}/>,
+    drawerWidth: 300
+  },
+
 );
 export default HomeScreenRouter;
